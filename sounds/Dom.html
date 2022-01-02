@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipluation</title>
+    <style>
+        #btn{
+            color:aqua;
+            background-color: black;
+            font-size: 25px;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+<!-- function greet(name,welcome){
+    console.log("Hello "+name+""+welcome)
+}
+let sti=   setInterval(greet,2000,'maaz','Please sign up our page'); -->
+<!-- console.log(sti) -->
+<body>
+    <div id="main" class="container">
+       <h1>This is heading</h1>
+       <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas dignissimos expedita praesentium dolore, incidunt officiis eveniet blanditiis fugit repellendus repellat debitis adipisci quasi a earum voluptates illo saepe maxime ut perferendis! Modi optio autem perspiciatis, non quis iusto voluptas aut, pariatur consectetur deserunt fugiat officiis repellendus? Dolorem odio expedita, voluptas voluptatem quos iure quidem porro neque provident ducimus soluta perspiciatis maiores laboriosam excepturi quibusdam repudiandae unde! Quas suscipit pariatur voluptate molestiae enim asperiores, rem, voluptates assumenda nulla placeat quae maxime corrupti quia sapiente quibusdam molestias recusandae natus facilis optio, eos autem numquam? Pariatur architecto, ab quas blanditiis aliquid dolorum ex ratione accusantium eaque tempore nam illum asperiores odio dolore obcaecati impedit aliquam ipsa esse. Fuga, provident explicabo. Mollitia nemo minima ut tempora! Odio eius fugiat ea, sint et, optio impedit sed nostrum quos excepturi est! Cupiditate soluta atque autem sunt quaerat at odio modi, nesciunt cumque ipsam animi deserunt, libero sequi inventore natus, dignissimos quae fuga iusto explicabo. Reprehenderit voluptas molestiae nemo aliquam, consequatur dolores dolor consequuntur corrupti eius ab fugiat velit provident quasi distinctio atque ipsa. Sequi velit dolores accusantium soluta ratione, debitis quo perspiciatis eaque, itaque minima eos dolore, in deserunt dolor pariatur exercitationem numquam corrupti voluptatem! Accusantium perspiciatis soluta, adipisci animi dolorem voluptatibus optio doloremque ipsa molestias nemo aut ab ullam ipsum enim deserunt, temporibus ut, quibusdam laboriosam perferendis cum nesciunt mollitia. Deleniti, reprehenderit labore eaque voluptas illum id magni.</p>
+        <span id="time">Time is </span>
+        
+    </div>
+    
+      <button onclick="playAudio()" type="button">Play Audio</button>
+      <button onclick="pauseAudio()" type="button">Pause Audio</button> 
+       <button id="btn" onclick="hide()">Showhide</button>
+    <script>
+       let newDate=new Date();
+       let yr=newDate.getFullYear()
+       console.log("The Year is:"+yr)
+       let dt=newDate.getMonth()
+       console.log("The Month is:"+dt)
+       let da=newDate.getDate()
+       console.log("The date is:"+da)
+       let hr=newDate.getHours()
+       console.log("The hour is:"+hr)
+
+       newDate.setDate(7)
+       console.log(newDate)
+       newDate.setMinutes(7)
+       console.log(newDate)
+        /*
+        How to Create function
+        let greet= ()  =>
+        console.log("Heelo maaz")
+
+        we can write this also
+        let sum=(a,b)=>a+b
+
+        */
+        /*Before arrow function we have write whole function*/
+       setInterval(updatetime,1000)
+       function updatetime(){
+    
+        let d= new Date();
+        document.getElementById("time").innerHTML=d
+
+       }
+      /*
+               After arrow function it is very easy to write*/
+       setTimeout(()=>{
+        console.log("today is holiday")
+    },2000)
+    var x = new Audio("tom-1.mp3")
+
+    function playAudio() { 
+      x.play(); 
+    }   
+    
+    function pauseAudio() { 
+      x.pause(); 
+    } 
+    </script>
+</body>
+</html>
